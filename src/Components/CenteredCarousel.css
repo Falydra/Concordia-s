@@ -27,8 +27,8 @@
 }
 
 .carousel-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 216, 44, 0.5);
+    transform: scale(1.06);
+    box-shadow: 0 2px 20px rgba(255, 216, 44, 0.5);
 }
 
 .carousel-card-image {
@@ -45,6 +45,35 @@
 }
 
 .splide__slide.is-active .carousel-card {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 216, 44, 0.5);
+    transform: scale(1.07);
+    box-shadow: 0 2px 20px rgba(255, 216, 44, 0.5);
+}
+
+@media (max-width: 768px) {
+    .splide__arrow {
+        margin: 0 10px;
+    }
+    .splide__arrow--prev {
+        left: -30px;
+    }
+    .splide__arrow--next {
+        right: -30px;
+    }
+    .splide__slide {
+        margin: 4px;
+        display: flex;
+        justify-content: center;
+    }
+    .carousel-card {
+        width: 170px;
+        height: 220px;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    .carousel-card-title {
+        font-size: 1rem;
+    }
 }

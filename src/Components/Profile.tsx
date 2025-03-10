@@ -21,7 +21,7 @@ export default function Profile() {
       className="relative flex md:flex-row flex-col w-full h-screen px-12 md:my-0 my-12"
       id="profile-section"
     >
-      <div className="flex-1 h-[272px] md:rounded-3xl flex-row md:rounded-tl-none md:rounded-bl-none gap-6 pb-6 px-4 pt-8 bg-white bg-opacity-30 flex items-center justify-center">
+      <div className="flex-1 h-[272px] md:rounded-3xl flex-row md:rounded-tr-none md:rounded-br-none gap-6 pb-6 px-4 pt-8 bg-white bg-opacity-30 flex items-center justify-center">
         <div className="md:w-[125px] w-[125px] aspect-square bg-white rounded-full flex items-center justify-center" />
         <div className="md:w-[225px] md:h-[125px] flex flex-col items-start justify-center">
           <h1 className="text-white text-xl font-bold">

@@ -9,6 +9,14 @@ export default function Profile() {
         link.download = "CV_Daffa_Aly_Meganendra.pdf"; 
         link.click();
       };
+
+      const handleDownloadCV2 = () => {
+        
+        const link = document.createElement("a");
+        link.href = "/files/CV%20TARA.pdf"; 
+        link.download = "CV_Tara_Tirzandina.pdf"; 
+        link.click();
+      };
   return (
     <div
       className="relative flex flex-row w-full h-screen bg-transparent px-12"
@@ -59,10 +67,10 @@ export default function Profile() {
             Informatika S1 - 2022
           </h2>
           <h4 className="text-black text-xs font-semibold">
-            21 Years Old
+            20 Years Old
           </h4>
           <Button
-           
+           onClick={handleDownloadCV2}
             className=" mt-4 bg-transparent backdrop-blur-xl border border-dark-fg w-[125px] h-[35px] text-white rounded-xl"
             variant="default"
             >

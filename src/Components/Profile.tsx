@@ -18,19 +18,19 @@ export default function Profile() {
 
   return (
     <div
-      className="relative flex md:flex-row flex-col w-full h-screen px-12"
+      className="relative flex md:flex-row flex-col w-full h-screen px-12 md:my-0 my-12"
       id="profile-section"
     >
       <div className="flex-1 h-[272px] md:rounded-3xl flex-row md:rounded-tl-none md:rounded-bl-none gap-6 pb-6 px-4 pt-8 bg-white bg-opacity-30 flex items-center justify-center">
         <div className="md:w-[125px] w-[125px] aspect-square bg-white rounded-full flex items-center justify-center" />
         <div className="md:w-[225px] md:h-[125px] flex flex-col items-start justify-center">
-          <h1 className="text-black text-xl font-bold">
+          <h1 className="text-white text-xl font-bold">
             Daffa Aly Meganendra
           </h1>
-          <h2 className="text-black text-sm font-semibold">
+          <h2 className="text-white text-sm font-semibold">
             Informatika S1 - 2022
           </h2>
-          <h4 className="text-black text-xs font-semibold">
+          <h4 className="text-white text-xs font-semibold">
             21 Years Old
           </h4>
           <Button
@@ -45,20 +45,20 @@ export default function Profile() {
 
       <div className="md:h-4 md:w-0 relative flex-shrink-0 items-center bg-transparent z-10">
         <div className="block absolute md:-left-4 md:skew-x-[42deg] skew-x-[115deg] left-36 -top-32 md:top-0 h-[272px] md:w-4 w-8 bg-black" />
-        <div className="absolute md:top-36 -top-10  left-36 md:-left-1 md:-translate-x-1/2 md:-translate-y-1/2 bg-black w-[78px] h-[78px] rounded-full flex items-center justify-center overflow-hidden">
+        <div className="absolute md:top-36 -top-6  left-28 md:-left-1 md:-translate-x-1/2 md:-translate-y-1/2 bg-black w-[78px] h-[78px] rounded-full flex items-center justify-center overflow-hidden">
           <BlackHoleStars />
         </div>
       </div>
 
       <div className="flex-1 h-[272px] md:rounded-3xl flex-row md:rounded-tl-none md:rounded-bl-none gap-6 pb-6 px-4 pt-8 bg-white bg-opacity-30 flex items-center justify-center">
         <div className="md:w-[225px] md:h-[125px] flex flex-col items-end justify-center">
-          <h1 className="text-black text-xl font-bold">
+          <h1 className="text-white text-xl font-bold">
             Tara Tirzandina
           </h1>
-          <h2 className="text-black text-sm font-semibold">
+          <h2 className="text-white text-sm font-semibold">
             Informatika S1 - 2022
           </h2>
-          <h4 className="text-black text-xs font-semibold">
+          <h4 className="text-white text-xs font-semibold">
             20 Years Old
           </h4>
           <Button

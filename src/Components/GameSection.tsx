@@ -1,13 +1,6 @@
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import React, { useRef } from "react";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "./ui/card";
-import { FaStar } from "react-icons/fa";
+import { motion, useInView} from "framer-motion";
+import { useRef } from "react";
+
 import Typewriter from "./TypeWritter";
 import CenteredCarousel from "./CenteredCarousel";
 import { Canvas } from "@react-three/fiber";
@@ -16,13 +9,9 @@ import Scene from "./Jupiter";
 const GameSection = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "0px 0px -5% 0px" });
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start start", "end start"],
-    });
 
-    const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-    const Text = useTransform(scrollYProgress, [0, 1], ["0%", "200%"]);
+
+   
 
     const games = [
         { name: "Minesweeper", image: "images/Image Vector.png", rating: 4 },

@@ -1,8 +1,8 @@
-import React from 'react';
+
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import './CenteredCarousel.css';
-import { Link } from '@inertiajs/react';
+
 
 const CenteredCarousel = () => {
     const games = [
@@ -11,7 +11,6 @@ const CenteredCarousel = () => {
         { name: 'KATLA', image: '/images/Katla.png' },
         { name: '8 Queens Challenge', image: '/images/8_Queens.png' },
         { name: 'Sudoku', image: '/images/Sudoku.png' },
-        { name: 'Memory Game', image: 'images/Image Vector.png' }
     ];
 
     return (

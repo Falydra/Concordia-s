@@ -1,7 +1,6 @@
 
 import { CiMail } from "react-icons/ci";
-import { Link } from "react-scroll";
-import { Link as PageLink} from '@inertiajs/react';
+
 import Services from "./Services";
 import Section from "./Section";
 import Company from "./Company";

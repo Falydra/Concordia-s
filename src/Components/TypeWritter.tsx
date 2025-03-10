@@ -28,7 +28,7 @@ export default function Typewriter ({ text, delay, infinite }: TypewriterProps) 
     }, [currentIndex, delay, infinite, text]);
 
     return (
-        <div style={{ width: `${text.length}ch`, whiteSpace: 'pre' }}>
+        <div style={{ width: `${text.length}ch`, whiteSpace: 'pre' }} className='mt-12 absolute md:mt-0 '>
             <h1>{currentText}</h1>
         </div>
     );

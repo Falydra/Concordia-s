@@ -1,6 +1,6 @@
 export default function Navbar(){
     return (
-        <div className="w-full fixed z-20 ">
+        <div className="w-full fixed md:h-[55px] z-20 ">
             <div className="flex-row flex w-full h-[55px] backdrop-blur-sm z-15   items-center justify-center top-0 left-0 sticky">
                 <div className="flex w-full h-full items-center justify-center">
                     <div className="flex w-full items-center justify-start">

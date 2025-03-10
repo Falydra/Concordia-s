@@ -42,7 +42,7 @@ const Banner = () => {
       />
 
 <motion.h1
-  className="bg-gradient-to-r from-red-500 to-blue-500 bg-clip-text text-transparent text-8xl font-semibold relative z-4 self-center"
+  className="bg-gradient-to-r sm:text-xl text-5xl from-red-500 to-blue-500 bg-clip-text text-transparent md:text-8xl font-semibold relative z-4 self-center"
   style={{
     y: textY,
     textShadow: `
@@ -68,7 +68,7 @@ const Banner = () => {
       >
         <Link to="game-section" smooth delay={100}>
           <Button
-            className="animate-bounce bg-transparent backdrop-blur-xl border border-dark-fg w-[170px] h-[45px] text-white px-8 py-4 rounded-3xl z-4 relative"
+            className="animate-bounce bg-transparent backdrop-blur-xl border border-dark-fg md:w-[170px] md:h-[45px] w-[150px] h-[40px]  text-white px-8 py-4 rounded-3xl z-4 relative"
             variant="ghost"
           >
             Get Started

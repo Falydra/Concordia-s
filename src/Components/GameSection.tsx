@@ -34,13 +34,13 @@ const GameSection = () => {
     return (
         <motion.div
             ref={ref}
-            className="flex gap-8 w-full h-full flex-row items-center justify-start py-20 bg-cover bg-center bg-red-flare z-25 overflow-y-auto overflow-x-hidden"
+            className="flex md:gap-8 w-full h-full md:flex-row flex-col items-center justify-start md:py-20 bg-cover bg-center bg-red-flare z-25 overflow-y-auto overflow-x-hidden"
             id="game-section"
             style={{ backgroundImage: "url(images/Landscape Vector.jpg)", height: "100vh" }}
         >
-            <div className="w-8/12 h-full flex flex-col items-start justify-center">
+            <div className="w-10/12 h-full flex flex-col items-start justify-center">
                 <motion.h1
-                    className="text-dark-accent text-4xl font-semibold px-12 w-full  "
+                    className="text-dark-accent text-4xl font-semibold Md:px-12 px-2 w-full  "
                     initial={{ opacity: 0, y: -200 }}
                     animate={{
                         opacity: isInView ? 1 : 0,
@@ -52,8 +52,11 @@ const GameSection = () => {
                         delay: 0.05,
                     }}
                 >
-                    <div className="flex relative">
-                        Welcome{" "}
+                    <div className="flex relative md:flex-row flex-col items-center">
+                        <h1 className="absolute">
+                            
+                            Welcome{" "}
+                        </h1>
                         <Typewriter text=" to Concordia" delay={100} infinite />
                     </div>
                 </motion.h1>

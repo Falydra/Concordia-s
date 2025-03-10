@@ -44,14 +44,14 @@ export default function Profile() {
       </div>
 
       <div className="md:h-4 md:w-0 relative flex-shrink-0 items-center bg-transparent z-10">
-        <div className="block absolute md:-left-4 md:skew-x-[42deg] skew-x-[115deg] left-36 -top-32 md:top-0 h-[272px] md:w-4 w-8 bg-black" />
-        <div className="absolute md:top-36 -top-6  left-28 md:-left-1 md:-translate-x-1/2 md:-translate-y-1/2 bg-black w-[78px] h-[78px] rounded-full flex items-center justify-center overflow-hidden">
+        <div className="block absolute md:-left-4 md:skew-x-[42deg] skew-x-[115deg] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:-translate-y-0 md:top-0 h-[272px] md:w-4 w-8 bg-black" />
+        <div className="absolute md:top-36 md:-left-1 md:-translate-x-1/2 md:-translate-y-1/2 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black w-[78px] h-[78px] rounded-full flex items-center justify-center overflow-hidden">
           <BlackHoleStars />
         </div>
       </div>
 
       <div className="flex-1 h-[272px] md:rounded-3xl flex-row md:rounded-tl-none md:rounded-bl-none gap-6 pb-6 px-4 pt-8 bg-white bg-opacity-30 flex items-center justify-center">
-        <div className="md:w-[225px] md:h-[125px] flex flex-col items-end justify-center">
+        <div className="md:w-[225px] md:h-[125px] flex flex-col items-end text-end justify-center">
           <h1 className="text-white text-xl font-bold">
             Tara Tirzandina
           </h1>

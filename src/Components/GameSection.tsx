@@ -34,11 +34,11 @@ const GameSection = () => {
     return (
         <motion.div
             ref={ref}
-            className="flex md:gap-8 w-full h-full md:flex-row flex-col items-center justify-start md:py-20 bg-cover bg-center bg-red-flare z-25 overflow-y-auto overflow-x-hidden overflow-y-hidden"
+            className="flex md:gap-8 w-full h-full md:flex-row flex-col items-center justify-start md:py-20 bg-cover bg-center bg-red-flare z-25  overflow-x-hidden overflow-y-hidden"
             id="game-section"
             style={{ backgroundImage: "url(images/Landscape Vector.jpg)", height: "100vh" }}
         >
-            <div className="w-10/12 md:w-8/12 h-full flex flex-col md:items-start items-center justify-center">
+            <div className="w-10/12 md:w-8/12 h-full flex flex-col md:items-start items-center justify-center md:mt-0 mt-12">
                 <motion.h1
                     className="text-dark-accent text-4xl font-semibold md:px-12 px-2 w-full  "
                     initial={{ opacity: 0, y: -200 }}
@@ -61,7 +61,7 @@ const GameSection = () => {
                     </div>
                 </motion.h1>
                 <motion.p
-                    className="text-dark-fg text-lg font-normal self-start pl-1 align-middle text-center md:mt-0 mt-24 w-full justify-center text-balance"
+                    className="text-dark-fg text-lg font-normal self-start pl-1 md:text-start md:ml-12 text-center md:mt-0 mt-24 w-full justify-center text-balance"
                     initial={{ opacity: 0, y: -200 }}
                     animate={{
                         opacity: isInView ? 1 : 0,

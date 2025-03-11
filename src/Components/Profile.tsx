@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 export default function Profile() {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/files/CV%20Daffa%20Aly%20M(Concordia).pdf"; 
+    link.href = "/files/CV%20Daffa%20Aly%20M(Concordia).docx.pdf"; 
     link.download = "CV_Daffa_Aly_Meganendra.pdf"; 
     link.click();
   };

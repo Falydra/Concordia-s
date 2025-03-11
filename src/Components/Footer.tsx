@@ -12,7 +12,7 @@ import { IoSend } from "react-icons/io5";
 
 export default function Footer() {
     return (
-        <div className="flex w-full h-[250px] flex-row bg-dark-bg items-start py-4 justify-center px-8 gap-8">
+        <div className="flex w-full md:h-[250px] min-h-screen md:flex-row flex-col bg-dark-bg items-start py-4 justify-center px-8 gap-8 overflow-y-hidden ">
             <div className="w-full flex flex-col items-start justify-center text-white">
                 <Company />
             </div>

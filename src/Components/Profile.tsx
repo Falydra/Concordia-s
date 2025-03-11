@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 export default function Profile() {
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/files/CV%20Daffa%20Aly%20M.pdf"; 
+    link.href = "/files/CV%20Daffa%20Aly%20M(Concordia).pdf"; 
     link.download = "CV_Daffa_Aly_Meganendra.pdf"; 
     link.click();
   };
@@ -22,7 +22,9 @@ export default function Profile() {
       id="profile-section"
     >
       <div className="flex-1 h-[272px] md:rounded-3xl flex-row md:rounded-tr-none md:rounded-br-none gap-6 pb-6 px-4 pt-8 bg-white bg-opacity-30 flex items-center justify-center">
-        <div className="md:w-[125px] w-[125px] aspect-square bg-white rounded-full flex items-center justify-center" />
+        <div className="md:w-[125px] w-[125px] aspect-square bg-cover bg-center bg-white rounded-full flex items-center justify-center"
+        style={{backgroundImage:"url('images/Man.jpeg')"}}
+        />
         <div className="md:w-[225px] md:h-[125px] flex flex-col items-start justify-center">
           <h1 className="text-white text-xl font-bold">
             Daffa Aly Meganendra
@@ -69,7 +71,9 @@ export default function Profile() {
             Download CV
           </Button>
         </div>
-        <div className="md:w-[125px] w-[125px] aspect-square bg-white rounded-full flex items-center justify-center" />
+        <div className="md:w-[125px] w-[125px] aspect-square bg-cover bg-center bg-white rounded-full flex items-center justify-center" 
+        style={{ backgroundImage: "url('images/Woman.jpeg')" }}
+        />
       </div>
     </div>
   );

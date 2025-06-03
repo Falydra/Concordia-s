@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
  
 import { cn } from "@/lib/utils"
-import { toast } from "@/hooks/use-toast"
+
 import { Button } from "@/Components/ui/button"
 import { Calendar } from "@/Components/ui/calendar"
 import {
@@ -35,14 +35,11 @@ export function ScheduleForm() {
   })
  
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    })
+    const formattedDate = format(data.dob, "PPP");
+    const subject = encodeURIComponent("Meeting Request");
+    const body = encodeURIComponent(`I would like to have a meet with you on ${formattedDate}`);
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=daffa.meganendra@gmail.com&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
   }
  
   return (
@@ -52,7 +49,7 @@ export function ScheduleForm() {
           control={form.control}
           name="dob"
           render={({ field }) => (
-            <FormItem className="flex flex-col">
+            <FormItem className="flex flex-col text-dark-bg">
               <FormLabel>Jadwal Pertemuan</FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
@@ -61,7 +58,7 @@ export function ScheduleForm() {
                       variant={"outline"}
                       className={cn(
                         "w-[240px] pl-3 text-left font-normal",
-                        !field.value && "text-muted-foreground"
+                        !field.value && "text-dark-bg"
                       )}
                     >
                       {field.value ? (

@@ -34,7 +34,7 @@ const GameSection = () => {
     return (
         <motion.div
             ref={ref}
-            className="flex md:gap-8 w-full h-full md:flex-row flex-col items-center justify-start md:py-20 bg-cover bg-center bg-red-flare z-25  overflow-x-hidden overflow-y-hidden"
+            className="flex md:gap-8 w-full h-screen md:flex-row flex-col items-center justify-start md:py-20 bg-cover bg-center bg-red-flare z-25  overflow-x-hidden overflow-y-hidden"
             id="game-section"
             style={{ backgroundImage: "url(images/Landscape Vector.jpg)", height: "100vh" }}
         >

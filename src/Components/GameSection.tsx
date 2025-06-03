@@ -52,7 +52,7 @@ const GameSection = () => {
                         delay: 0.05,
                     }}
                 >
-                    <div className="flex relative md:flex-row flex-col items-center">
+                    <div className="flex relative md:flex-row flex-col md:items-start items-center">
                         <h1 className="absolute md:relative">
                             
                             Welcome{" "}

@@ -42,7 +42,7 @@ const Banner = () => {
       />
 
 <motion.h1
-  className="bg-gradient-to-r sm:text-xl text-5xl from-red-500 to-blue-500 bg-clip-text text-transparent md:text-8xl font-semibold relative z-4 md:mb-0 mb-16"
+  className="bg-gradient-to-r sm:text-6xl text-5xl from-red-500 to-blue-500 bg-clip-text text-transparent md:text-8xl font-semibold relative z-4 md:mb-0 mb-16"
   style={{
     y: textY,
     textShadow: `

@@ -15,7 +15,7 @@ description: "A mobile application for booking and managing service appointments
 detail: "Developed user-centric mobile services for vehicle discovery and service booking, transforming stakeholder requirements into an intuitive, brand-aligned interface while delivering the application within strict deadlines.",
 time: "2023 - 2024",
 techStack: ["Flutter", "Dart", "Supabase", "API"],
-image: "/images/Isuzu App.png",
+image: "/images/IsuzuApp.png",
 },
 {
 title: "Diponegoro Chemistry Fair 2024",
@@ -23,7 +23,7 @@ description: "A website for the Diponegoro Chemistry Fair 2024, providing inform
 detail: "Developed the official responsive website and optimized the digital registration workflow for international participants, collaborating with committee stakeholders to deliver a user-friendly platform aligned with the event branding.",
 time: "2022 - 2023",
 techStack: ["JavaScript", "Node.js", "MySQL", "Laravel", "Tailwind CSS", "React", "PHP"],
-image: "/images/Landscape Vector.jpg",
+image: "/images/LandscapeVector.jpg",
 },
 ];
 

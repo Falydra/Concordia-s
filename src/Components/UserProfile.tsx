@@ -63,7 +63,7 @@ export default function userProfile() {
                         transition={{ duration: 0.3 }}
                     >
                         <img
-                            src="/images/Pasfoto Formal.jpeg"
+                            src="/images/PasfotoFormal.jpeg"
                             alt="Daffa Aly Meganendra"
                             className="w-full h-full object-cover"
                             onError={(e) => {

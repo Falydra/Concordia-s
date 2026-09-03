@@ -1,27 +1,27 @@
+import {Link} from "react-scroll"
+
 export default function Navbar(){
     return (
-        <div className="w-full fixed md:h-[55px] z-20 md:flex hidden ">
-            <div className="flex-row flex w-full h-[55px] backdrop-blur-sm z-15   items-center justify-center top-0 left-0 sticky">
-                <div className="flex w-full h-full items-center justify-center">
-                    <div className="flex w-full items-center justify-start">
-                        {/* <img src="images/Screenshot_2025-01-02_195749-removebg-preview.png" className="w-auto flex h-16" /> */}
+        <div className="w-full z-10  md:h-[55px] absolute justify-center text items-center bg-transparent flex flex-row m-3">
+                <div className="flex  h-full items-center justify-center  w-1/3 bg-transparent backdrop-blur-xl rounded-full shadow-[0_0_30px_rgba(255,255,255,0.4)]">
+                {/* <div className="flex  h-full items-center justify-center  w-full border-white backdrop-blur-3xl rounded-full absolute"/> */}
+                   
+                    <div className="flex w-full items-center justify-around gap-12">
+                        <Link to="user-profile" smooth delay={300} className="text-white relative group cursor-pointer">
+                            Profile
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        </Link>
+                        <Link to="user-background" smooth delay={100} className="text-white relative group cursor-pointer">
+                            Background
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        </Link>
+                        <Link to="user-projects" smooth delay={100} className="text-white relative group cursor-pointer">
+                            Projects
+                            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                        </Link>
                     </div>
-                    <div className="flex w-full items-center justify-around text-white">
-                      
-                      <h1>
-                        Home
-                      </h1>
-                      <h2>
-                        About
-                      </h2>
-                        <h3>
-                            Contact
-                        </h3>
-                    </div>
-                    <div className="flex w-full items-center justify-end mr-3 text-white">
-                       
-                    </div>
-                </div>
+                    
+              
             </div>
 
         </div>

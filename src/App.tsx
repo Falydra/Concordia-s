@@ -1,22 +1,26 @@
 
-// import Navbar from "./Components/Navbar";
+import Navbar from "./Components/Navbar";
 import Banner from "./Components/Banner";
-import GameSection from "./Components/GameSection";
-import Profile from "./Components/Profile";
 import Footer from "./Components/Footer";
-import Scheduling from "./Components/Scheduling";
+import UserProfile from "./Components/UserProfile";
+import Background from "./Components/Background";
+import Projects from "./Components/Projects";
 
 import { Stars } from "./Components/Stars";
 
 const Welcome = () => {
     return (
-        <div className="flex w-full bg-black  min-h-screen flex-col items-center justify-start overflow-x-hidden scrollbar-y-hidden overflow-y-auto z-10">
+        <div className="relative flex w-full bg-black min-h-screen flex-col items-center justify-start overflow-x-hidden z-10">
             <Stars />
-            {/* <Navbar /> */}
+            <Navbar />
             <Banner />
-            <GameSection />
-            <Scheduling />
-            <Profile />
+            {/* <GameSection /> */}
+            <UserProfile />
+            <Background />
+            <Projects />
+            
+            {/* <Scheduling />
+            <Profile /> */}
             {/* <SpotifyPlayer />
             <SpotifyPlayerComponent /> */}
             

@@ -1,79 +1,68 @@
 
 import { CiMail } from "react-icons/ci";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-scroll";
 
-import Services from "./Services";
-import Section from "./Section";
-import Company from "./Company";
-import Reports from "./Reports";
-import { FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { IoSend } from "react-icons/io5";
+const projects = [
+    "Smartlet: Swiftlet Smart Farming",
+    "Isuzu Mobile Service Booking App",
+    "Diponegoro Chemistry Fair 2024",
+];
 
+const socialLinks = [
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/daffa-aly-meganendra/", icon: FaLinkedin },
+    { label: "GitHub", href: "https://github.com/Falydra", icon: FaGithub },
+    { label: "Instagram", href: "https://www.instagram.com/falydra/", icon: FaInstagram },
+];
 
 export default function Footer() {
     return (
-        <div className="flex w-full md:h-[250px] h-[200px] md:flex-row flex-col bg-dark-bg items-start py-4 justify-center px-8 gap-8 overflow-y-hidden ">
-            <div className="w-full flex flex-col items-start justify-center text-white">
-                <Company />
-            </div>
-            <div className="w-full flex flex-col items-start justify-center text-white">
-                <Services />
-            </div>
-            <div className="w-full flex flex-col items-start justify-center text-white">
-                <Section />
-            </div>
-            <div className="w-full flex flex-col items-start justify-center text-white">
-              <Reports />
-            </div>
-            <div className="w-full flex flex-col items-start justify-center text-white">
-                <h1 className="text-xl font-semibold"> Contact Us</h1>
-                <div className="flex w-full flex-row items-center justify-start text-white mt-4 gap-2">
-                    <CiMail className="text-white w-5 h-5" />
-                    <h1 className="text-sm font-normal">
+        <footer className="mt-auto w-full border-t border-white/10 bg-transparent px-6 py-12 text-white backdrop-blur-md md:px-12">
+            <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+                <div>
+                    <p className="text-2xl font-semibold tracking-tight">Daffa Aly Meganendra</p>
+                    <p className="mt-3 max-w-sm leading-relaxed text-white/60">
+                        Informatics student and mobile application developer building useful,
+                        accessible digital experiences.
+                    </p>
+                    <a href="mailto:daffa.meganendra@gmail.com" className="mt-6 inline-flex items-center gap-2 text-sm text-white/80 transition-colors hover:text-emerald-300">
+                        <CiMail className="h-5 w-5" />
                         daffa.meganendra@gmail.com
-                    </h1>
+                    </a>
                 </div>
-                <div className="flex w-full flex-row items-center justify-start text-white mt-2 gap-2">
-                    <FaInstagram className="text-white w-5 h-5" />
-                    <h1 className="text-sm font-normal">
-                        falydra
-                    </h1>
-                    <FaInstagram className="text-white w-5 h-5" />
-                    <h1 className="text-sm font-normal">
-                        taratirzaa
-                    </h1>
+
+                <div>
+                    <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/50">Explore</h2>
+                    <nav className="mt-4 flex flex-col items-start gap-3 text-sm text-white/70">
+                        <Link to="hero-section" smooth className="cursor-pointer transition-colors hover:text-emerald-300">Home</Link>
+                        <Link to="user-profile" smooth className="cursor-pointer transition-colors hover:text-emerald-300">Profile</Link>
+                        <Link to="user-background" smooth className="cursor-pointer transition-colors hover:text-emerald-300">Background</Link>
+                        <Link to="user-projects" smooth className="cursor-pointer transition-colors hover:text-emerald-300">Projects</Link>
+                    </nav>
                 </div>
-                <div className="flex w-full flex-row items-center justify-start text-white mt-2 gap-2">
-                    <FaXTwitter className="text-white w-5 h-5" />
-                    <h1 className="text-sm font-normal">
-                       Oriessi
-                    </h1>
-                    <FaXTwitter className="text-white w-5 h-5" />
-                    <h1 className="text-sm font-normal">
-                        ndogdadaarr
-                    </h1>
+
+                <div>
+                    <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/50">Selected work</h2>
+                    <div className="mt-4 flex flex-col gap-3 text-sm text-white/70">
+                        {projects.map((project) => (
+                            <Link key={project} to="user-projects" smooth className="cursor-pointer leading-relaxed transition-colors hover:text-emerald-300">
+                                {project}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
-                <h1 className="text-md font-light mt-4"> 
-                    Get in touch with us
-                </h1>
-                <form className="relative flex flex-row w-full items-center justify-center">
-                    <input type="text" placeholder="Email" className=" w-full h-8 rounded-md ">
-                       
-                    </input>
-                    <button
-                            type="submit"
-                            className="absolute right-2 top-1/2 transform -translate-y-1/2 text-black"
-                        >
-                            <IoSend  />
-
-                    </button>
-
-                   
-                   
-                </form>
-                
-
             </div>
-        </div>
+
+            <div className="mx-auto mt-10 flex max-w-6xl flex-col justify-between gap-5 border-t border-white/10 pt-6 text-sm text-white/45 sm:flex-row sm:items-center">
+                <p>© 2026 Daffa Aly Meganendra. Built with care.</p>
+                <div className="flex items-center gap-4">
+                    {socialLinks.map(({ label, href, icon: Icon }) => (
+                        <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} title={label} className="text-white/60 transition-colors hover:text-emerald-300">
+                            <Icon className="h-5 w-5" />
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </footer>
     );
 }

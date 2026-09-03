@@ -1,6 +1,6 @@
-import  { useMemo } from 'react';
-import { useRef} from 'react';
-import { motion, useScroll, useTransform} from 'framer-motion';
+import { useMemo } from 'react';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 
 
@@ -25,12 +25,12 @@ export const Stars = () => {
     target: ref,
     offset: ['start start', 'end start'],
   });
-  
+
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   const textY = useTransform(scrollYProgress, [0, 1], ['0%', '200%']);
 
   return (
-    <div className='min-h-screen w-full absolute inset-0 z-0' ref={ref}>
+    <div className='pointer-events-none absolute inset-0 z-0 w-full overflow-hidden' ref={ref}>
       {/* Small stars */}
       <motion.div
         className="absolute top-0 left-0 w-[1px] h-[1px] bg-transparent animate-animStar50"
@@ -49,17 +49,17 @@ export const Stars = () => {
       />
       <motion.div
         className="absolute top-[2000px] left-0 w-[2px] h-[2px] bg-transparent animate-animStar100"
-        style={{ boxShadow: starsMedium, y: backgroundY}}
+        style={{ boxShadow: starsMedium, y: backgroundY }}
       />
 
       {/* Big stars */}
       <motion.div
         className="absolute top-0 left-0 w-[3px] h-[3px] bg-transparent animate-animStar150"
-        style={{ boxShadow: starsBig, y:backgroundY }}
+        style={{ boxShadow: starsBig, y: backgroundY }}
       />
       <motion.div
         className="absolute top-[2000px] left-0 w-[3px] h-[3px] bg-transparent animate-animStar150"
-        style={{ boxShadow: starsBig, y:textY }}
+        style={{ boxShadow: starsBig, y: textY }}
       />
     </div>
   );

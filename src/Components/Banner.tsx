@@ -38,7 +38,7 @@ const Banner = () => {
 
       <motion.div
         className="absolute inset-0 w-full h-full flex items-center justify-center bg-center bg-cover z-1"
-        // style={{ backgroundImage: "url('images/your-background.jpg')", y: backgroundY }}
+        // style={{ backgroundImage: "url('images/your-background.jpg')", y: ba
       />
 
 <motion.h1
@@ -66,7 +66,7 @@ const Banner = () => {
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 100 : -200 }}
         transition={{ duration: 0.9, ease: [0.17, 0.55, 0.55, 1], delay: 0.05 }}
       >
-        <Link to="game-section" smooth delay={100}>
+        <Link to="user-profile" smooth delay={100}>
           <Button
             className="animate-bounce bg-transparent backdrop-blur-xl border border-dark-fg md:w-[170px] md:h-[45px] w-[150px] h-[40px]  text-white px-8 py-4 rounded-3xl z-4 relative"
             variant="ghost"

@@ -26,9 +26,9 @@ export default function userProfile() {
     };
 
     return (
-        <div id="user-profile" className="w-full h-screen bg-transparent flex-row bg-red-flare z-25 py-20 px-4">
+        <div id="user-profile" className="z-10 flex min-h-[100svh] w-full items-center bg-transparent px-4 py-20 sm:px-6 lg:px-8 bg-[_radial-gradient(at_0%_100%,_hsla(253,16%,7%,1)_0,transparent_50%),_radial-gradient(at_100%_0%,_hsla(339,79%,10%,1)_0,transparent_50%)]">
             <motion.div
-                className="max-w-5xl mx-auto h-full"
+                className="mx-auto flex w-full max-w-5xl flex-col justify-center"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -36,14 +36,14 @@ export default function userProfile() {
             >
                 
                 <motion.div
-                    className="flex flex-col md:flex-row justify-between items-center gap-8 w-full"
+                    className="flex w-full flex-col items-center justify-between gap-10 md:flex-row md:gap-16"
                     variants={itemVariants}
                 >
                    
 
-                    <div className="flex flex-col w-1/2 text-center md:text-left">
+                    <div className="flex w-full max-w-2xl flex-col text-center md:text-left">
                         <motion.h1
-                            className="text-4xl md:text-4xl font-bold text-white mb-4"
+                            className="mb-4 text-3xl font-bold text-white sm:text-4xl"
                             variants={itemVariants}
                         >
                             Daffa Aly Meganendra
@@ -58,7 +58,7 @@ export default function userProfile() {
                         </motion.p>
                     </div>
                     <motion.div
-                        className="w-1/4 h-1/3 aspect-square mb-8 rounded-full border-4 border-white/40 overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.3)] bg-black/20 backdrop-blur-sm flex items-center justify-center"
+                        className="mb-2 aspect-square w-40 shrink-0 overflow-hidden rounded-full border-4 border-white/40 bg-black/20 shadow-[0_0_30px_rgba(255,255,255,0.3)] backdrop-blur-sm sm:w-52 md:order-first md:mb-0"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                     >
@@ -73,13 +73,13 @@ export default function userProfile() {
                     </motion.div>
 
                 </motion.div>
-                <div className="w-full flex-col items-start justify-center gap-10 md:flex">
-                    <div className="w-full flex-row items-center justify-start gap-4 md:flex">
+                <div className="mt-10 flex w-full flex-col items-center justify-center gap-8 md:items-start">
+                    <div className="flex w-full flex-wrap items-center justify-center gap-3 md:justify-start">
                         <motion.a
                         href="https://www.linkedin.com/in/daffa-aly-meganendra/"
                         target="_blank"
                         rel="noreferrer"
-                        className="flex rounded-md flex-row items-center justify-center gap-4 border w-1/6 h-8"
+                        className="flex h-10 min-w-[110px] flex-1 flex-row items-center justify-center gap-2 rounded-md border px-3 sm:flex-none"
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                         variants={itemVariants}
@@ -93,7 +93,7 @@ export default function userProfile() {
                         href="https://github.com/Falydra"
                         target="_blank"
                         rel="noreferrer"
-                        className="flex rounded-md flex-row items-center justify-center gap-4 border w-1/6 h-8"
+                        className="flex h-10 min-w-[110px] flex-1 flex-row items-center justify-center gap-2 rounded-md border px-3 sm:flex-none"
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                         variants={itemVariants}
@@ -107,7 +107,7 @@ export default function userProfile() {
                         href="https://www.instagram.com/falydra/"
                         target="_blank"
                         rel="noreferrer"
-                        className="flex rounded-md flex-row items-center justify-center gap-4 border w-1/6 h-8"
+                        className="flex h-10 min-w-[110px] flex-1 flex-row items-center justify-center gap-2 rounded-md border px-3 sm:flex-none"
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                         variants={itemVariants}
@@ -120,7 +120,7 @@ export default function userProfile() {
 
                     </div>
                     <motion.div
-                    className="flex rounded-3xl cursor-pointer flex-col items-center justify-center gap-4 border w-1/6 h-12"
+                    className="flex h-12 w-full cursor-pointer flex-col items-center justify-center gap-4 rounded-3xl border px-5 sm:w-fit"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                     variants={itemVariants}

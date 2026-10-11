@@ -29,7 +29,7 @@ const Banner = () => {
 
   return (
     <div
-      className="relative bg-[radial-gradient(at_0%_0%,_hsla(225,39%,30%,1)_0,transparent_50%),_radial-gradient(at_50%_0%,_hsla(253,16%,7%,1)_0,transparent_50%),_radial-gradient(at_100%_100%,_hsla(339,79%,10%,1)_0,transparent_50%)] flex w-full flex-col min-h-screen items-center justify-center text-center"
+      className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-[radial-gradient(at_0%_0%,_hsla(225,39%,30%,1)_0,transparent_50%),_radial-gradient(at_50%_0%,_hsla(253,16%,7%,1)_0,transparent_50%),_radial-gradient(at_100%_100%,_hsla(339,79%,10%,1)_0,transparent_50%)] px-4 text-center"
       id="hero-section"
       ref={ref}
     >
@@ -42,7 +42,7 @@ const Banner = () => {
       />
 
 <motion.h1
-  className="bg-gradient-to-r sm:text-6xl text-5xl from-red-500 to-blue-500 bg-clip-text text-transparent md:text-8xl font-semibold relative z-4 md:mb-0 mb-16"
+  className="relative z-[4] mb-16 bg-gradient-to-r from-red-500 to-blue-500 bg-clip-text text-4xl font-semibold text-transparent sm:text-6xl md:mb-0 md:text-8xl"
   style={{
     y: textY,
     textShadow: `
@@ -61,7 +61,7 @@ const Banner = () => {
       <div className="absolute inset-0 w-full h-full flex items-center justify-center bg-center bg-cover z-7" />
 
       <motion.div
-        className="w-full h-full items-center flex flex-col justify-end"
+        className="flex h-full w-full flex-col items-center justify-end pb-20"
         initial={{ opacity: 0, y: -200 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 100 : -200 }}
         transition={{ duration: 0.9, ease: [0.17, 0.55, 0.55, 1], delay: 0.05 }}
@@ -78,7 +78,7 @@ const Banner = () => {
       </motion.div>
 
       
-      <div className="w-full flex flex-row items-center justify-center bottom-24 absolute">
+      <div className="absolute bottom-8 flex w-full flex-row items-center justify-center">
         <Button
           onClick={toggleAudio}
           className="bg-transparent backdrop-blur-xl border border-dark-fg w-[45px] h-[45px] text-white rounded-3xl z-4"

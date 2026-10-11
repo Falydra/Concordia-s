@@ -40,7 +40,7 @@ export default function Background() {
     return (
         <section
             id="user-background"
-            className="relative w-full min-h-screen px-6 mb-8 text-white"
+            className="relative w-full px-4 py-20 text-white sm:px-6 lg:px-8"
         >
             <motion.div
                 className="mx-auto max-w-4xl"
@@ -49,21 +49,21 @@ export default function Background() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
             >
-                <motion.div variants={itemVariants} className="mb-16 text-center">
+                <motion.div variants={itemVariants}                 className="mb-12 text-center sm:mb-16">
                     <p className="mb-3 text-sm uppercase tracking-[0.3em] text-white/60">
                         My Background
                     </p>
-                    <h2 className="text-4xl font-bold md:text-5xl">Education Timeline</h2>
+                    <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Education Timeline</h2>
                 </motion.div>
 
                 <div className="relative">
                     <div className="absolute bottom-0 left-3 top-0 w-px bg-white/25 md:left-1/2 md:-translate-x-1/2" />
-                    <div className="space-y-12">
+                    <div className="space-y-8 sm:space-y-12">
                         {timelineItems.map((item, index) => (
                             <motion.article
                                 key={item.title}
                                 variants={itemVariants}
-                                className={`relative flex w-full items-start pl-12 md:w-1/2 md:pl-0 ${
+                                className={`relative flex w-full items-start pl-10 md:w-1/2 md:pl-0 ${
                                     index % 2 === 0 ? "md:pr-14" : "md:ml-auto md:pl-14"
                                 }`}
                             >
@@ -74,7 +74,7 @@ export default function Background() {
                                             : "md:left-[-14px]"
                                     }`}
                                 />
-                                <div className="w-full rounded-xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm">
+                                <div                                 className="w-full rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm sm:p-6">
                                     <p className="mb-2 text-sm text-white/60">{item.period}</p>
                                     <h3 className="text-xl font-semibold">{item.title}</h3>
                                     <p className="mt-3 leading-relaxed text-white/70">{item.description}</p>

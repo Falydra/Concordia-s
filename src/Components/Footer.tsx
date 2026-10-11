@@ -17,7 +17,7 @@ const socialLinks = [
 
 export default function Footer() {
     return (
-        <footer className="mt-auto w-full border-t border-white/10 bg-transparent px-6 py-12 text-white backdrop-blur-md md:px-12">
+        <footer className="mt-auto w-full border-t border-white/10 bg-transparent px-4 py-10 text-white backdrop-blur-md sm:px-6 sm:py-12 md:px-12">
             <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
                 <div>
                     <p className="text-2xl font-semibold tracking-tight">Daffa Aly Meganendra</p>
@@ -54,7 +54,7 @@ export default function Footer() {
             </div>
 
             <div className="mx-auto mt-10 flex max-w-6xl flex-col justify-between gap-5 border-t border-white/10 pt-6 text-sm text-white/45 sm:flex-row sm:items-center">
-                <p>© 2026 Daffa Aly Meganendra. Built with care.</p>
+                <p className="max-w-xs leading-relaxed sm:max-w-none">© 2026 Daffa Aly Meganendra. Built with care.</p>
                 <div className="flex items-center gap-4">
                     {socialLinks.map(({ label, href, icon: Icon }) => (
                         <a key={label} href={href} target="_blank" rel="noreferrer" aria-label={label} title={label} className="text-white/60 transition-colors hover:text-emerald-300">
